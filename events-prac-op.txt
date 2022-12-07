@@ -1,0 +1,24 @@
+@Paxyifier ➜ /workspaces/WTL-Prac3 (main ✗) $ node events-prac.js 
+ I'm First
+Hello Events
+ I'm First
+Hello Events
+Message from fun1: undefined
+Message from fun2: undefined
+Default max listener for eventEmitter1 is :  10
+Default max listener for eventEmitter2 is :  10
+Default max listener for eventEmitter1 is :  2
+Default max listener for eventEmitter2 is :  2
+Default max listener for eventEmitter1 is :  5
+Default max listener for eventEmitter2 is :  2
+Message from fun1: Event1 Occurred
+Message from fun1: Event1 Occurred
+Message from fun1: Event1 Occurred
+Message from fun2: Event2 Occurred
+Message from fun2: Event2 Occurred
+Message from fun2: Event2 Occurred
+[ [Function: fun2] ]
+1
+Message from fun2: Event Occurred
+(node:21623) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 3 myEvent2 listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
