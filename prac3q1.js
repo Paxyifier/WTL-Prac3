@@ -1,13 +1,13 @@
 var eventDemo = require('events');
 var eventEmitter = new eventDemo.EventEmitter();
-eventEmitter.on('myEvent',()=>{
+eventEmitter.on('Myevent',()=>{
     console.log(" I'm First");
 });
 var myEventHandler = ()=>{
     console.log('Hello Events');
 }
-eventEmitter.on('myEvent',myEventHandler);
-eventEmitter.emit('myEvent');
+eventEmitter.on('Myevent',myEventHandler);
+eventEmitter.emit('Myevent');
 
 var fun1 = (msg) => {
     console.log('Message from fun1: '+msg);
@@ -21,7 +21,7 @@ eventEmitter.on('myEvent',fun2);
 
 eventEmitter.removeListener('myEvent',fun1);
 
-eventEmitter.emit('myEvent')
+eventEmitter.emit('myEvent');
 
 eventEmitter.removeAllListeners('myEvent');
 
@@ -56,14 +56,14 @@ var fun2 = (msg) => {
 };
 
 for (let i = 0; i<3; i++)
-    eventEmitter1.addListener('myEvent1',fun1)
+    eventEmitter1.addListener('myEvent1',fun1);
 for(let i = 0; i<3; i++)
-    eventEmitter2.addListener('myEvent2',fun2)
+    eventEmitter2.addListener('myEvent2',fun2);
 eventEmitter1.emit('myEvent1','Event1 Occurred');
 eventEmitter2.emit('myEvent2','Event2 Occurred');
 
 eventEmitter.prependListener('myEvent',fun2);
 
-console.log(eventEmitter.listeners('myEvent'))
-console.log(eventEmitter.listenerCount('myEvent'))
+console.log(eventEmitter.listeners('myEvent'));
+console.log(eventEmitter.listenerCount('myEvent'));
 eventEmitter.emit('myEvent','Event Occurred');
